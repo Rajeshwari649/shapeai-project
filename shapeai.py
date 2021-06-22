@@ -17,12 +17,10 @@ wind_spd = api_data['wind']['speed']
 date_time = datetime.now().strftime("%d %m %Y | %H:%M:%S ")
 
 
-L = "Weather Stats for - {}  || {}".format(location.upper(), date_time)
-m = "Current temperature is: {:.2f} deg C".format(temp_city)
-n =  "Current weather desc  :", weather_desc
-o = " Current Humidity      :", hmdt, '%'
-p = "Current wind speed    :", wind_spd ,'kmph'
-d = [L,m,n,o,p]
+
+d = ["Weather Stats for - {}  || {}".format(location.upper(), date_time),"Current temperature is: {:.2f} deg C".format(temp_city)
+,"Current weather desc  - {}".format(weather_desc),"Current Humidity -{} %".format(hmdt), 
+"Current wind speed- {} kmph".format(wind_spd)]
 
 file_dis = input("enter file name to display the content")
 fd = open(file_dis,"x")
