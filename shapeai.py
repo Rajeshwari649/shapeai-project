@@ -22,17 +22,13 @@ m = "Current temperature is: {:.2f} deg C".format(temp_city)
 n =  "Current weather desc  :", weather_desc
 o = " Current Humidity      :", hmdt, '%'
 p = "Current wind speed    :", wind_spd ,'kmph'
+d = [L,m,n,o,p]
 
 file_dis = input("enter file name to display the content")
 fd = open(file_dis,"x")
-fd.write(str(L))
-fd.write("\n")
-fd.write(str(m))
-fd.write("\n")
-fd.write(str(n))
-fd.write("\n")
-fd.write(str(o))
-fd.write("\n")
-fd.write(str(p))
+for i in range(len(d)):
+    fd.write(str(d[i]))
+    fd.write("\n")
+
 fd.close()
 
